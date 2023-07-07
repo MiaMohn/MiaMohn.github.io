@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skinlicious</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Javascript/Scripts.js"></script>
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Open Sans-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75,400;0,100,600;0,100,700;1,100,400&display=swap" rel="stylesheet">
+    <!--M Plus Rounded 1c-->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet">
+    
+    <!--Animación-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/dfaf864cd9.js" crossorigin="anonymous"></script>
+
+    <!--Precarga de Imágenes-->
+    <link rel="preload" as="image" href="Media/heroImageHeader.jpg">
+    <link rel="preload" as="image" href="Media/heroImageHeader2.jpg">
+    <link rel="preload" as="image" href="Media/heroImageHeader3.jpg">
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--Parallax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.js"></script>
+
+</head>
+
+<body>
+    <header id="home">
+
+        <div class="bgHero" id="bgHero1"></div>
+        <div class="bgHero" id="bgHero2"></div>
+        <div class="bgHero" id="bgHero3"></div>
+
+        <!--Menu-->
+        <nav id="navBar">
+            <!--Logo menu-->
+            <a href="index.html">
+                <img src="Media/logoMenu.png" id="logoMenu" alt="Skinlicious">
+            </a>
+
+            <ul id="menu">
+                <li class="menuItem"><a href="#home">Home</a></li>
+                <li class="menuItem"><a href="#products">Products</a></li>
+                <li class="menuItem"><a href="#about">About us</a></li>
+                <li class="menuItem"><a href="#gallery">Gallery</a></li>
+                <li class="menuItem"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--Header-->
+
+        <!--Imagen de Logo+Slogan-->
+        <img src="Media/logoHeader.png" id="pageLogoSlogan" class="animate__animated animate__rotateIn" alt="Skinlicious. Is your skin hungry? Give it something tasty!">
+
+    </header>
+
+
+    <!--Seccion Informacion-->
+    <section id="information">
+
+        <div id="blockInfo">
+
+            <!--Dividido en 2 bloques de contenido-->
+
+            <!--Primer Bloque-->
+            <div id="infoBloque1">
+
+                <!--Dividido en 2 Bloques (texto+imagen)-->
+
+                <!--Texto-->
+                <div class="colInfo">
+                    <div class="colInfoText" data-aos="fade-right">
+                        <h3 class="textHeading">Lorem ipsum dolor</h3>
+
+                        <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue ullamcorper ornare. In hac habitasse platea dictumst. Mauris nec congue magna. Mauris feugiat ante ante, a laoreet tellus sagittis eu. Vestibulum et risus condimentum, porttitor justo nec, elementum erat. Duis posuere commodo viverra.</p>
+
+                        <button class="colButton" type="button">BOTON</button>
+                    </div>
+                </div>
+
+                <!--Imagen-->
+                <div class="colInfo">
+                    <img src="Media/infoImagen1.jpg" class="colInfoImage" alt="Mano con crema hidratante">
+                </div>
+            </div>
+
+            <!--Segundo Bloque-->
+            <div id="infoBloque2">
+
+                <!--Dividido en 2 Bloques (imagen+texto)-->
+
+                <!--Imagen-->
+                <div class="colInfo">
+                    <img src="Media/infoImagen2.jpg" class="colInfoImage" alt="Chico de pelo morado con la piel cubierta de pegatinas coloridas">
+                </div>
+
+                <!--Texto-->
+                <div class="colInfo">
+                    <div class="colInfoText" data-aos="fade-left">
+                        <h3 class="textHeading">Lorem ipsum dolor</h3>
+
+                        <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue ullamcorper ornare. In hac habitasse platea dictumst. Mauris nec congue magna. Mauris feugiat ante ante, a laoreet tellus sagittis eu. Vestibulum et risus condimentum, porttitor justo nec, elementum erat. Duis posuere commodo viverra.</p>
+
+                        <button class="colButton" type="button">BOTON</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Seccion Productos-->
+    <section id="products">
+
+        <h2 class="sectionTitle">OUR PRODUCTS</h2>
+
+        <!--Navegador Categoria Productos-->
+        <div id="navProducts">
+            <p id="tabSerum" class="navElementProducts activeTab" onclick="selectTab('serum','tabSerum')">Serum</p>
+            <p id="tabFacecream" class="navElementProducts" onclick="selectTab('facecream','tabFacecream')">Face cream</p>
+            <p id="tabBodymilk" class="navElementProducts" onclick="selectTab('bodymilk','tabBodymilk')">Bodymilk</p>
+            <p id="tabCleanser" class="navElementProducts" onclick="selectTab('cleanser','tabCleanser')">Cleanser</p>
+        </div>
+
+         <!--Contenedor de galeria de productos SERUM-->
+         <div class="listProducts" id="serum">
+
+            <!--Caja de Producto 1-->
+            <div class="productBox animateProduct">
+
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/serum1.jpg" alt="Blue Berry serum">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 2-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/serum2.jpg" alt="Strawberry serum">
+                </div>
+                
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 3-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/serum3.jpg" alt="Cotton Candy serum">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Contenedor de galeria de productos FACE CREAM-->
+        <div class="listProducts" id="facecream">
+
+            <!--Caja de Producto 1-->
+            <div class="productBox">
+
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/facecream1.jpg" alt="Blue Berry face cream">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 2-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/facecream2.jpg" alt="Strawberry face cream">
+                </div>
+                
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 3-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/facecream3.jpg" alt="Cotton Candy face cream">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Contenedor de galeria de productos BODYMILK-->
+        <div class="listProducts" id="bodymilk">
+
+            <!--Caja de Producto 1-->
+            <div class="productBox">
+
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/bodymilk1.jpg" alt="Blue Berry bodymilk">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 2-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/bodymilk2.jpg" alt="Strawberry bodymilk">
+                </div>
+                
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 3-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/bodymilk3.jpg" alt="Cotton Candy bodymilk">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Contenedor de galeria de productos CLEANSER-->
+        <div class="listProducts" id="cleanser">
+
+            <!--Caja de Producto 1-->
+            <div class="productBox">
+
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/cleanser1.jpg" alt="Blue Berry cleanser">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 2-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/cleanser2.jpg" alt="Strawberry cleanser">
+                </div>
+                
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+
+            <!--Caja de Producto 3-->
+            <div class="productBox">
+                
+                <!--Imagen del producto-->
+                <div class="productImage">
+                    <img src="Media/cleanser3.jpg" alt="Cotton Candy cleanser">
+                </div>
+
+                <!--Texto de informacion del producto-->
+                <div class="productInfo">
+
+                    <h4 class="productName">Nombre producto</h4>
+
+                    <p class="productPrice">€€</p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Seccion About Us-->
+    <section id="about">
+
+        <div id="aboutBloque">
+
+            <!--Dividido en 2 Bloques (texto+imagen)-->
+
+            <!--Texto-->
+            <div class="colAbout">
+                <div class="colAboutText" data-aos="fade-right">
+                    <h3 class="textHeading">About us</h3>
+
+                    <!--Acordeon-->
+                    <div id="acordeonBox">
+
+                        <button class="acordeon">Header 1</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                        <button class="acordeon">Header 2</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                        <button class="acordeon">Header 3</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Video-->
+            <div class="colAbout">
+                <video class= "colAboutVideo" autoplay="true" loop muted>
+                    <source src="Media/pexels-ron-lach-8143148-1366x720-25fps.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Imagen Parallax-->
+    <section id="parallax">
+        <!--<img id="imagenParallax" src="Media/imagenParallax.jpg" alt="">-->
+
+        <div class="parallax-window"></div>
+    </section>
+
+    <!--Seccion Galeria-->
+    <section id="gallery">
+
+        <h2 class="sectionTitle">GALLERY</h2>
+
+        <!--Contenedor de imagenes-->
+        <div id="boxGalery">
+
+            <div class="imagesbox">
+                <img class="imgGal" src="Media/galeriaImagen1.jpg">
+            </div>
+            <div class="imagesbox">
+                <img class="imgGal" src="Media/galeriaImagen2.jpg">
+            </div>
+            <div class="imagesbox">
+                <img class="imgGal" src="Media/galeriaImagen3.jpg">
+            </div>
+            <div class="imagesbox">
+                <img class="imgGal" src="Media/galeriaImagen4.jpg">
+            </div>
+            <div class="imagesbox">
+                <img class="imgGal" src="Media/galeriaImagen5.jpg">
+            </div>
+            <div class="imagesbox">
+                <img class="imgGal" src="Media/galeriaImagen6.jpg">
+            </div>
+
+        </div>
+
+        <!--Modal LightBox de Galeria-->
+        <div id="modalLBgallery">
+            <div id="imageToShow">
+
+            </div>
+            <button class="LBbutton LBbuttonRight" onclick="nextImg()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="LBbutton LBbuttonLeft" onclick="prevImg()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="closeButton" onclick="closeLB()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+    </section>
+
+    <!--Seccion Contacto y Footer-->
+    <footer id="footer">
+        <section id="contact">
+
+            <h2 class="sectionTitle">CONTACT US</h2>
+
+            <!--Contenedor Formulario-->
+            <div id="contactForm">
+
+                <form action="" id="form">
+
+                    <input id="name" type="text" name="name" placeholder="name" required>
+                    <input id="email" type="email" name="email" placeholder="email" required>
+                    <textarea id="message" name="message" placeholder="Hiiii!!! How are you?" required></textarea>
+                    
+                    <input id="buttonSend" title="Click me" class="colButton" onclick="modalForm()" name="button" value="ENVIAR">
+
+                </form>
+            </div>
+
+            <!--Modal de Formulario-->
+            <div id="modalForm">
+                <div id="modalBoxForm">
+                    <h1 id="modalTitle">Nice to meet you!</h1>
+                    <p id="messageConfirmation"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio ut ipsa consectetur iure cum quod rem maiores quaerat dicta aliquam minima doloribus, eaque similique a ex in aut temporibus assumenda!</p>
+                    <button id="buttonModal" class="colButton" onclick="closeMF()">OK!</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Redes Sociales-->
+        <section id="RRSS">
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="icono" id="insta">
+                    <i class="fa-brands fa-instagram" id="instaIcono"></i>
+                </div>
+            </a>
+
+            <a href="https://facebook.com/" target="_blank">
+                <div class="icono" id="fb">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </a>
+
+            <a href="https://www.pinterest.es/" target="_blank">
+                <div class="icono" id="pinterest">
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+            </a>
+        </section>
+    </footer>
+
+    <script>
+        /*setInterval(heroSlideshow, 5000);*/
+        setInterval(heroSlideshowAn, 5000);
+        readyLB();
+        AcordeonBox();
+        tooltipButton();
+        Parallax();
+
+    </script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
